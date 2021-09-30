@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(250, 250, 250);
+}
+.tabs {
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .innerTabs {
+    width: 50vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    button {
+      width: 120px;
+      padding: 3px 0;
+      background-color: white;
+      border: none;
+      outline: none;
+      box-shadow: 0px 0px 1px 1px rgb(255, 60, 60);
+      color: red;
+      background-color: white;
+      border-radius: 5px;
+      &:hover {
+        background-color: rgb(252, 235, 235);
+      }
+    }
+  }
+}
+.product-container {
+  width: 90vw;
+  height: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  .card {
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px 1px grey;
+    margin: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+    height: 300px;
+    background-color: white;
+
+    > div:nth-child(1) {
+      width: 100%;
+      height: 60%;
+      position: relative;
+      top: -26px;
+      border-radius: 5px;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+      }
+    }
+    .info {
+      height: 10%;
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h4 {
+        color: rgb(102, 84, 84);
+      }
+    }
+    button {
+      width: 90%;
+      padding: 2px 0px;
+      position: relative;
+      top: 14px;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      background-image: linear-gradient(
+        to right,
+        rgb(255, 225, 225),
+        rgb(255, 243, 217)
+      );
+    }
+  }
+}
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media screen and (max-width: 1216px) {
+  .tabs .innerTabs {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .tabs .innerTabs {
+    width: 100vw;
+  }
+}
